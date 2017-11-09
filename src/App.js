@@ -13,6 +13,7 @@ import './App.css';
 import Autocomplete from './Autocomplete';
 
 import MyTheme from './componentTheme.js';
+import DateFormat from './componentDate.js';
 
 
 class App extends Component {
