@@ -9,8 +9,12 @@ import cerfadentiste from './assets/img/cerfa-dentiste.png'
 import cerfa from './assets/img/cerfa.png'
 import cross from './assets/img/cross.png'
 import './App.css';
+
+import Autocomplete from './Autocomplete';
+
 import MyTheme from './componentTheme.js';
 import DateFormat from './componentDate.js';
+
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +29,7 @@ class App extends Component {
     return (
       <div className="App" style={styles.body}>
         <div style={styles.container}>
-          <h1 style={styles.h1}>Feuilles de soin bucco-dentaires</h1>
+          <h1 style={styles.h1}>feuilles de soin bucco-dentaires</h1>
           <div style={styles.firstContainer}>
             <div style={{width: 220}}>
               <img src={cerfa} alt="cerfa.png" style={{height: 114/1.5, width: 168/1.5,marginTop: -30, marginLeft: -30}}/>
@@ -55,6 +59,7 @@ class App extends Component {
                 <TextField
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
                   hintText="Numéro de facture"
+                  underlineShow={false}
                   floatingLabelText="Numéro de facture (facultatif)" />
                   <DatePicker hintText="Date" DateTimeFormat={DateFormat} mode="landscape" locale="fr" style={{marginTop: -42}}/>
                 </MuiThemeProvider>
@@ -64,8 +69,17 @@ class App extends Component {
           <div style={{display: 'flex', marginTop: 4}}>
             <h3 style={styles.h3}> PERSONNE RECEVANT LES SOINS </h3><i style={styles.italic}>(La ligne "nom et prénom" est obligatoirement remplie par le praticien)</i>
           </div>
-          <div style={{display: 'flex', marginTop: 4}}>
-            <h4 style={styles.h4dark}>nom et prénom</h4>
+          <div style={{marginTop: 4}}>
+            <MuiThemeProvider muiTheme={MyTheme}>
+              <TextField
+               fullWidth={true}
+               floatingLabelStyle= {{paddingLeft: 10, top: 27}}
+               style={{backgroundColor: '#d7d1ca', height: 25}}
+               underlineShow={false}
+               inputStyle={{ left: 94, bottom: 13}}
+               floatingLabelText="nom et prénom"
+               floatingLabelFixed={true}/>
+           </MuiThemeProvider>
           </div>
           <div style={{display: 'flex', marginTop: 4}}>
             <i style={styles.italic}>(Nom de famille - de naissance - suivi du nom d'usage (facultatif et s'il y a lieu)</i>
@@ -130,8 +144,10 @@ const styles = {
     fontSize: 12
   },
   h4dark: {
-    backgroundColor: '#72644f',
-    color: 'white',
+    margin: 0,
+    display: 'flex',
+    backgroundColor: '#d7d1ca',
+    color: '#72644f',
     fontSize: 13,
     fontWeight: 300,
   }
