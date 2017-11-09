@@ -63,7 +63,7 @@ class App extends Component {
                   underlineShow={false}
                   floatingLabelText="Numéro de facture (facultatif)"
                   floatingLabelFixed={true} />
-                  <DatePicker hintText="Date" mode="landscape" style={{marginTop: -42}}/>
+                  <DatePicker hintText="Date" DateTimeFormat={DateFormat} mode="landscape" locale="fr" style={{marginTop: -42}}/>
                 </MuiThemeProvider>
             </div>
           </div>
