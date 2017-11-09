@@ -27,6 +27,7 @@ class App extends Component {
     console.log(this.state);
     return (
       <div className="App" style={styles.body}>
+{/* HEADER */}
         <div style={styles.container}>
           <h1 style={styles.h1}>feuilles de soin bucco-dentaires</h1>
           <div style={styles.firstContainer}>
@@ -56,8 +57,6 @@ class App extends Component {
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
-                  // hintText="Numéro de facture"
-                  // style={{backgroundColor: '#d7d1ca', marginBottom: 10}}
                   inputStyle={{ backgroundColor: '#d7d1ca', height: 35, top: 30 }}
                   underlineShow={false}
                   floatingLabelText="Numéro de facture (facultatif)"
@@ -66,9 +65,11 @@ class App extends Component {
                 </MuiThemeProvider>
             </div>
           </div>
+{/* 1ere partie */}
           <h3 style={styles.h3dark}> PERSONNE RECEVANT LES SOINS ET ASSURE(E) </h3>
           <div style={{display: 'flex', marginTop: 4}}>
-            <h3 style={styles.h3}> PERSONNE RECEVANT LES SOINS </h3><i style={styles.italic}>(La ligne "nom et prénom" est obligatoirement remplie par le praticien)</i>
+{/* Personne recevant les soins */}
+            <h3 style={styles.h3}> PERSONNE RECEVANT LES SOINS </h3><i style={styles.italicTitle}>(La ligne "nom et prénom" est obligatoirement remplie par le praticien)</i>
           </div>
           <div style={{marginTop: 4, height: 22}}>
             <MuiThemeProvider muiTheme={MyTheme}>
@@ -88,7 +89,7 @@ class App extends Component {
 
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
 
-          <div style={{width: '60%'}}>
+          <div style={{display: 'flex', flexDirection: 'column', width: '60%'}}>
             <MuiThemeProvider muiTheme={MyTheme}>
               <TextField
                floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
@@ -98,22 +99,77 @@ class App extends Component {
                floatingLabelText="numéro d'application"
                floatingLabelFixed={true}/>
            </MuiThemeProvider>
-         </div>
 
-         <div>
            <MuiThemeProvider muiTheme={MyTheme}>
-             <TextField
-              floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
-              style={{backgroundColor: '#d7d1ca', height: 25}}
+              <DatePicker
+              floatingLabelFixed={true}
+              floatingLabelText="date de naissance"
               underlineShow={false}
-              inputStyle={{fontSize: 20 }}
-              floatingLabelFixed={true}/>
+              floatingLabelStyle= {{paddingLeft: 0, top: 27, fontSize: 18, left: -110}}
+              DateTimeFormat={DateFormat}
+              mode="landscape"
+              locale="fr"
+              style={{backgroundColor: '#d7d1ca', height: 25, width: '500px', marginTop: 10}}
+              inputStyle={{ left: 26, bottom: 14, fontSize: 20, height: 25, borderLeft: 'thin solid white', width: '352px'}} />
           </MuiThemeProvider>
-        </div>
-
-        </div>
-
+         </div>
+           <div style={{display: 'flex', flexDirection: 'column', width: '20%'}}>
+             <MuiThemeProvider muiTheme={MyTheme}>
+               <TextField
+                floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+                style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+                underlineShow={false}
+                inputStyle={{fontSize: 20 }}
+                floatingLabelFixed={true}/>
+            </MuiThemeProvider>
+            <i style={styles.italic}>Code de l'organisme de rattachement en cas de dispense d'avance des frais (à remplir par le praticien, le cas échéant)</i>
           </div>
+        </div>
+{/* ASSURE */}
+        <div style={{display: 'flex'}}>
+          <h3 style={styles.h3}> ASSURE(E) </h3><i style={styles.italicTitle}>(à remplir si la personne recevant les soins n'est pas l'assuré(e))</i>
+        </div>
+        <div style={{marginTop: 4, height: 22}}>
+          <MuiThemeProvider muiTheme={MyTheme}>
+            <TextField
+             fullWidth={true}
+             floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+             style={{backgroundColor: '#d7d1ca', height: 25}}
+             underlineShow={false}
+             inputStyle={{ left: 110, bottom: 13, fontSize: 20}}
+             floatingLabelText="nom et prénom"
+             floatingLabelFixed={true}/>
+         </MuiThemeProvider>
+        </div>
+        <div style={{display: 'flex', marginTop: 4}}>
+          <i style={styles.italic}>(Nom de famille - de naissance - suivi du nom d'usage (facultatif et s'il y a lieu)</i>
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column', width: '60%'}}>
+          <MuiThemeProvider muiTheme={MyTheme}>
+            <TextField
+             floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+             style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+             underlineShow={false}
+             inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+             floatingLabelText="numéro d'application"
+             floatingLabelFixed={true}/>
+         </MuiThemeProvider>
+        </div>
+{/*Addresse de l'ASSURE */}
+        <div style={{display: 'flex'}}>
+          <h3 style={styles.h3}>{"ADRESS DE L'ASSURE(E)"}</h3>
+        </div>
+        <MuiThemeProvider muiTheme={MyTheme}>
+          <TextField
+           fullWidth={true}
+           floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+           style={{backgroundColor: '#d7d1ca', height: 25}}
+           underlineShow={false}
+           inputStyle={{fontSize: 20}}
+           floatingLabelFixed={true}/>
+        </MuiThemeProvider>
+
+        </div>
       </div>
 
     );
@@ -166,6 +222,12 @@ const styles = {
     alignContent: 'left',
     margin: 0,
     paddingLeft: 10,
+  },
+  italicTitle: {
+    marginTop: 8,
+    paddingLeft: 5,
+    color: '#72644f',
+    fontSize: 12
   },
   italic: {
     paddingLeft: 5,
