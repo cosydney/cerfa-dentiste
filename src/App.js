@@ -40,7 +40,6 @@ class App extends Component {
                       label='CHIRURGIEN DENTISTE'
                       labelPosition="left"
                       labelStyle={{fontWeight: 'bold', color: '#72644f'}}
-                      inputStyle={{color: 'red'}}
                       style={styles.checkbox}/>
               </MuiThemeProvider>
           </div>
@@ -89,24 +88,29 @@ class App extends Component {
 
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
 
-          <MuiThemeProvider muiTheme={MyTheme}>
-            <TextField
-             floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
-             style={{backgroundColor: '#d7d1ca', height: 25, width: '60%'}}
-             underlineShow={false}
-             inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
-             floatingLabelText="numéro d'application"
-             floatingLabelFixed={true}/>
-         </MuiThemeProvider>
+          <div style={{width: '60%'}}>
+            <MuiThemeProvider muiTheme={MyTheme}>
+              <TextField
+               floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+               style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+               underlineShow={false}
+               inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+               floatingLabelText="numéro d'application"
+               floatingLabelFixed={true}/>
+           </MuiThemeProvider>
+         </div>
 
-         <MuiThemeProvider muiTheme={MyTheme}>
-           <TextField
-            floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
-            style={{backgroundColor: '#d7d1ca', height: 25}}
-            underlineShow={false}
-            inputStyle={{ left: 110, bottom: 13, fontSize: 20, backgroundColor: 'red'}}
-            floatingLabelFixed={true}/>
-        </MuiThemeProvider>
+         <div>
+           <MuiThemeProvider muiTheme={MyTheme}>
+             <TextField
+              floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+              style={{backgroundColor: '#d7d1ca', height: 25}}
+              underlineShow={false}
+              inputStyle={{fontSize: 20 }}
+              floatingLabelFixed={true}/>
+          </MuiThemeProvider>
+        </div>
+
         </div>
 
           </div>
