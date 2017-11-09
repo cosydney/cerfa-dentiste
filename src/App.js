@@ -7,7 +7,6 @@ import DatePicker from 'material-ui/DatePicker';
 import logo from './logo.svg';
 import cerfadentiste from './assets/img/cerfa-dentiste.png'
 import cerfa from './assets/img/cerfa.png'
-import cross from './assets/img/cross.png'
 import './App.css';
 
 import Autocomplete from './Autocomplete';
@@ -87,6 +86,29 @@ class App extends Component {
           <div style={{display: 'flex', marginTop: 4}}>
             <i style={styles.italic}>(Nom de famille - de naissance - suivi du nom d'usage (facultatif et s'il y a lieu)</i>
           </div>
+
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
+
+          <MuiThemeProvider muiTheme={MyTheme}>
+            <TextField
+             floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+             style={{backgroundColor: '#d7d1ca', height: 25, width: '60%'}}
+             underlineShow={false}
+             inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+             floatingLabelText="numéro d'application"
+             floatingLabelFixed={true}/>
+         </MuiThemeProvider>
+
+         <MuiThemeProvider muiTheme={MyTheme}>
+           <TextField
+            floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+            style={{backgroundColor: '#d7d1ca', height: 25}}
+            underlineShow={false}
+            inputStyle={{ left: 110, bottom: 13, fontSize: 20, backgroundColor: 'red'}}
+            floatingLabelFixed={true}/>
+        </MuiThemeProvider>
+        </div>
+
           </div>
       </div>
 
