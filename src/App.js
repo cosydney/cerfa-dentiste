@@ -56,8 +56,8 @@ class App extends Component {
                     </MuiThemeProvider>
                 </div>
               </div>
-              <p>Art R. 161-40 et suivants du code de la sécurité sociale <br/>
-              Art. L. 115 du Code des pensions militaires d'invalidité et des victimes de la guerre
+              <p>
+              Art R. 161-40 et suivants du code de la sécurité sociale <br/> {"Art. L. 115 du Code des pensions militaires d'invalidité et des victimes de la guerre"}
               </p>
             </div>
 
@@ -65,12 +65,13 @@ class App extends Component {
             <div style={{width: 200}}>
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
-                  style={{top: -50, display: 'flex', flexDirection: 'column'}}
+                  style={{top: -50, display: 'flex', flexDirection: 'column', width: '100%'}}
                   inputStyle={{ backgroundColor: '#d7d1ca', height: 35, top: 30 }}
                   underlineShow={false}
-                  floatingLabelText="Numéro de facture (facultatif)"
+                  floatingLabelText="Numéro facture (facultatif)"
                   floatingLabelFixed={true} />
-                  <DatePicker hintText="Date" DateTimeFormat={DateFormat} mode="landscape" locale="fr" style={{marginTop: -42}}/>
+                  <DatePicker hintText="Date" DateTimeFormat={DateFormat} mode="landscape" locale="fr" style={{marginTop: -42, width: '100%'}}
+                  underlineShow={false}/>
                 </MuiThemeProvider>
             </div>
           </div>
@@ -217,7 +218,7 @@ const styles = {
   firstContainer:{
     display: 'flex',
     alignContent: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     color: '#72644f'
   },
   h3dark: {
