@@ -23,6 +23,6 @@ export default App;
 </MuiThemeProvider>
 
 const appTitle = {
-  z-index: -1;
-  height: 100vh;
+  zIndex: -1,
+  height: "100px"
 };
