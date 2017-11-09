@@ -9,6 +9,7 @@ import cerfadentiste from './assets/img/cerfa-dentiste.png'
 import cerfa from './assets/img/cerfa.png'
 import cross from './assets/img/cross.png'
 import './App.css';
+import MyTheme from './componentTheme.js';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class App extends Component {
             </div>
 
             <div style={{width: 220}}>
-              <MuiThemeProvider >
+              <MuiThemeProvider muiTheme={MyTheme}>
                   <Checkbox
                       label='CHIRURGIEN DENTISTE'
                       labelPosition="left"
@@ -40,7 +41,7 @@ class App extends Component {
               </MuiThemeProvider>
           </div>
           <div style={{width: 220}}>
-              <MuiThemeProvider>
+              <MuiThemeProvider muiTheme={MyTheme}>
                     <Checkbox
                         label='MEDECIN'
                         labelPosition="left"
@@ -49,7 +50,7 @@ class App extends Component {
                 </MuiThemeProvider>
             </div>
             <div style={{width: 220}}>
-              <MuiThemeProvider>
+              <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
                   hintText="Numéro de facture"
