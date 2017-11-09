@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App" style={styles.body}>
         <div style={styles.container}>
-          <h1 style={styles.h1}>Feuilles de soin bucco-dentaires</h1>
+          <h1 style={styles.h1}>feuilles de soin bucco-dentaires</h1>
           <div style={styles.firstContainer}>
             <div style={{width: 220}}>
               <img src={cerfa} alt="cerfa.png" style={{height: 114/1.5, width: 168/1.5,marginTop: -30, marginLeft: -30}}/>
@@ -62,7 +62,7 @@ class App extends Component {
           <div style={{display: 'flex', marginTop: 4}}>
             <h3 style={styles.h3}> PERSONNE RECEVANT LES SOINS </h3><i style={styles.italic}>(La ligne "nom et prénom" est obligatoirement remplie par le praticien)</i>
           </div>
-          <div style={{display: 'flex', marginTop: 4}}>
+          <div style={{marginTop: 4}}>
             <h4 style={styles.h4dark}>nom et prénom</h4>
           </div>
           <div style={{display: 'flex', marginTop: 4}}>
@@ -128,8 +128,10 @@ const styles = {
     fontSize: 12
   },
   h4dark: {
-    backgroundColor: '#72644f',
-    color: 'white',
+    margin: 0,
+    display: 'flex',
+    backgroundColor: '#d7d1ca',
+    color: '#72644f',
     fontSize: 13,
     fontWeight: 300,
   }
