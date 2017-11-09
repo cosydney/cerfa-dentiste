@@ -31,29 +31,38 @@ class App extends Component {
         <div style={styles.container}>
           <h1 style={styles.h1}>feuilles de soin bucco-dentaires</h1>
           <div style={styles.firstContainer}>
-            <div style={{width: 220}}>
+            <div style={{width: 200}}>
               <img src={cerfa} alt="cerfa.png" style={{height: 114/1.5, width: 168/1.5,marginTop: -30, marginLeft: -30}}/>
             </div>
 
-            <div style={{width: 220}}>
-              <MuiThemeProvider muiTheme={MyTheme}>
-                  <Checkbox
-                      label='CHIRURGIEN DENTISTE'
-                      labelPosition="left"
-                      labelStyle={{fontWeight: 'bold', color: '#72644f'}}
-                      style={styles.checkbox}/>
-              </MuiThemeProvider>
-          </div>
-          <div style={{width: 220}}>
-              <MuiThemeProvider muiTheme={MyTheme}>
-                    <Checkbox
-                        label='MEDECIN'
-                        labelPosition="left"
-                        labelStyle={{fontWeight: 'bold', color: '#72644f'}}
-                        style={styles.checkbox}/>
-                </MuiThemeProvider>
+            <div>
+              <div style={{width: 480, display: 'flex', alignItems: 'center'}}>
+                <div style={{width: 260}}>
+                  <MuiThemeProvider muiTheme={MyTheme}>
+                      <Checkbox
+                          label='CHIRURGIEN DENTISTE'
+                          labelPosition="left"
+                          labelStyle={{fontWeight: 'bold', color: '#72644f'}}
+                          style={styles.checkbox}/>
+                  </MuiThemeProvider>
+              </div>
+              <div style={{width: 220}}>
+                  <MuiThemeProvider muiTheme={MyTheme}>
+                        <Checkbox
+                            label='MEDECIN'
+                            labelPosition="left"
+                            labelStyle={{fontWeight: 'bold', color: '#72644f'}}
+                            style={styles.checkbox}/>
+                    </MuiThemeProvider>
+                </div>
+              </div>
+              <p>Art R. 161-40 et suivants du code de la sécurité sociale <br/>
+              Art. L. 115 du Code des pensions militaires d'invalidité et des victimes de la guerre
+              </p>
             </div>
-            <div style={{width: 220}}>
+
+
+            <div style={{width: 200}}>
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
