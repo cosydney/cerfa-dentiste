@@ -4,11 +4,15 @@ import RaisedButton from 'material-ui/RaisedButton';
 import logo from './logo.svg';
 import cerfa from './assets/img/cerfa-dentiste.png'
 import './App.css';
+import Autocomplete from './Autocomplete';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+      <MuiThemeProvider>
+      <Autocomplete/>
+      </MuiThemeProvider>
       <h1 className={appTitle}>Welcome to Cerfa-Dentiste</h1>
           <img src={cerfa} className="cerfa" alt="logo" />
       </div>
