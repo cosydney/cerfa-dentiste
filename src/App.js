@@ -10,6 +10,7 @@ import cerfa from './assets/img/cerfa.png'
 import cross from './assets/img/cross.png'
 import './App.css';
 import MyTheme from './componentTheme.js';
+import DateFormat from './componentDate.js';
 
 class App extends Component {
   constructor(props) {
@@ -55,7 +56,7 @@ class App extends Component {
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
                   hintText="Numéro de facture"
                   floatingLabelText="Numéro de facture (facultatif)" />
-                  <DatePicker hintText="Date" mode="landscape" style={{marginTop: -42}}/>
+                  <DatePicker hintText="Date" DateTimeFormat={DateFormat} mode="landscape" locale="fr" style={{marginTop: -42}}/>
                 </MuiThemeProvider>
             </div>
           </div>
