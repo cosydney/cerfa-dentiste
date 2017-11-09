@@ -57,9 +57,12 @@ class App extends Component {
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
                   style={{top: -50, display: 'flex', flexDirection: 'column'}}
-                  hintText="Numéro de facture"
+                  // hintText="Numéro de facture"
+                  // style={{backgroundColor: '#d7d1ca', marginBottom: 10}}
+                  inputStyle={{ backgroundColor: '#d7d1ca', height: 35, top: 30 }}
                   underlineShow={false}
-                  floatingLabelText="Numéro de facture (facultatif)" />
+                  floatingLabelText="Numéro de facture (facultatif)"
+                  floatingLabelFixed={true} />
                   <DatePicker hintText="Date" mode="landscape" style={{marginTop: -42}}/>
                 </MuiThemeProvider>
             </div>
@@ -68,14 +71,14 @@ class App extends Component {
           <div style={{display: 'flex', marginTop: 4}}>
             <h3 style={styles.h3}> PERSONNE RECEVANT LES SOINS </h3><i style={styles.italic}>(La ligne "nom et prénom" est obligatoirement remplie par le praticien)</i>
           </div>
-          <div style={{marginTop: 4}}>
+          <div style={{marginTop: 4, height: 22}}>
             <MuiThemeProvider muiTheme={MyTheme}>
               <TextField
                fullWidth={true}
-               floatingLabelStyle= {{paddingLeft: 10, top: 27}}
+               floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
                style={{backgroundColor: '#d7d1ca', height: 25}}
                underlineShow={false}
-               inputStyle={{ left: 94, bottom: 13}}
+               inputStyle={{ left: 110, bottom: 13, fontSize: 20}}
                floatingLabelText="nom et prénom"
                floatingLabelFixed={true}/>
            </MuiThemeProvider>
@@ -138,7 +141,7 @@ const styles = {
     paddingLeft: 10,
   },
   italic: {
-    paddingLeft: 10,
+    paddingLeft: 5,
     color: '#72644f',
     fontSize: 12
   },
