@@ -9,7 +9,11 @@ import cerfadentiste from './assets/img/cerfa-dentiste.png'
 import cerfa from './assets/img/cerfa.png'
 import cross from './assets/img/cross.png'
 import './App.css';
+
+import Autocomplete from './Autocomplete';
+
 import MyTheme from './componentTheme.js';
+
 
 class App extends Component {
   constructor(props) {
