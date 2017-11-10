@@ -461,7 +461,7 @@ class App extends Component {
             </h6>
       <div style={{display: 'flex',  justifyContent: 'space-between', height: 550}}>
         <div style={{flex: 8}}>
-          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
             <p> date des actes </p>
           </div>
           <div style={{display: 'flex',  justifyContent: 'space-between', flexDirection: 'column', height: '375px'}}>
@@ -504,7 +504,7 @@ class App extends Component {
           </div>
         </div>
         <div style={{flex: 8}}>
-        <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+        <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
           <p> code des actes </p>
         </div>
           <div>
@@ -531,14 +531,16 @@ class App extends Component {
                       MsTransform: 'rotate(-90deg)',
                       transform: 'rotate(-90deg)',
                       backgroundColor: '#d7d1ca',
-                      height: '50px'}}>
+                      height: '60px',
+                      paddingLeft: 17,
+                    }}>
             <p> activités </p>
           </div>
           <div>
           </div>
         </div>
         <div style={{flex: 2}}>
-          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
             <p> C. CS </p>
             <p> V. VS </p>
           </div>
@@ -546,7 +548,7 @@ class App extends Component {
           </div>
         </div>
         <div style={{flex: 7}}>
-          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
             <p> autres actes (TO, ...)
              éléments de la tarification CCAM
              (modificateurs, association,...)</p>
@@ -555,7 +557,7 @@ class App extends Component {
           </div>
         </div>
         <div style={{flex: 7}}>
-          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
               <p> montant des honoraires facturés </p>
             </div>
           <div>
@@ -570,14 +572,15 @@ class App extends Component {
                       MsTransform: 'rotate(-90deg)',
                       transform: 'rotate(-90deg)',
                       backgroundColor: '#d7d1ca',
-                      height: '50px'}}>
+                      height: '60px',
+                      paddingLeft: 17 }}>
             <p> dépass. </p>
           </div>
           <div>
           </div>
         </div>
         <div style={{flex: 8}}>
-          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '60px'}}>
             <p> frais de déplacement </p>
           </div>
           <div>
