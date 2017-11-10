@@ -178,6 +178,43 @@ class App extends Component {
            inputStyle={{fontSize: 20}}
            floatingLabelFixed={true}/>
         </MuiThemeProvider>
+{/* IDENTIFICATION */}
+
+      <div style={{display: 'flex', justifyContent: 'space-between', height: 250}} >
+        <div style={{backgroundColor: 'red', flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
+          <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <TextField
+                 floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+                 style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+                 underlineShow={false}
+                 inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+                 floatingLabelText="nom et prénom"
+                 floatingLabelFixed={true}/>
+                 <TextField
+                  floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+                  style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+                  underlineShow={false}
+                  inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+                  floatingLabelText="identifiant"
+                  floatingLabelFixed={true}/>
+             </MuiThemeProvider>
+          </div>
+        </div>
+        <div style={{backgroundColor: 'blue', flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
+          <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <TextField
+                 floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18}}
+                 style={{backgroundColor: '#d7d1ca', height: 25, width: '100%'}}
+                 underlineShow={false}
+                 inputStyle={{ left: 150, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+                 floatingLabelText="dispositif de coordination de soins - réseau de santé"
+                 floatingLabelFixed={true}/>
+             </MuiThemeProvider>
+          </div>
+        </div>
+      </div>
 
         </div>
       </div>
