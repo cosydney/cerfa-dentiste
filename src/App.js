@@ -453,7 +453,12 @@ class App extends Component {
               </MuiThemeProvider>
               </div>
             </div>
-            {/* PAIEMENT */}
+{/* ACTES EFFECTUES */}
+            <h3 style={styles.h3dark}> ACTES EFFECTUES  </h3>
+            <h6 style={{color: '#72644f',margin: 0, fontSize: 14}}>
+              <i>(si les actes sont soumis à la formalité de l'accord préalable, indiquez la date de la demande)</i>
+            </h6>
+{/* PAIEMENT */}
               <div style={{display: 'flex', marginTop: 4}}>
                   <h3 style={styles.h3dark}> PAIEMENT </h3>
               </div>
@@ -617,7 +622,6 @@ const styles = {
   },
   h6: {
     color: '#72644f',
-    alignContent: 'left',
     margin: 0,
     paddingLeft: 10,
   },
