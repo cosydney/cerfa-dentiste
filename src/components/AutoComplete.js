@@ -29,6 +29,7 @@ export default class AutoCompleteCCAM extends Component {
           onUpdateInput={this.handleUpdateInput}
           maxSearchResults={10}
           listStyle={styles.list}
+          filter={AutoComplete.caseInsensitiveFilter}
           fullWidth={true}
         />
       </div>

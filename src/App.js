@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Text } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+// import RaisedButton from 'material-ui/RaisedButton';
 import Checkbox from 'material-ui/Checkbox';
 import TextField from 'material-ui/TextField';
 import DatePicker from 'material-ui/DatePicker';
-import logo from './logo.svg';
-import cerfadentiste from './assets/img/cerfa-dentiste.png'
+// import cerfadentiste from './assets/img/cerfa-dentiste.png'
 import cerfa from './assets/img/cerfa.png'
 import './App.css';
 
-import Autocomplete from './Autocomplete';
+import AutoComplete from './components/AutoComplete';
+import Box from './components/Box';
+import TextLogo from './components/TextLogo';
 
 import MyTheme from './componentTheme.js';
-import DateFormat from './componentDate.js';
+import DateFormat from './components/componentDate.js';
 
 
 class App extends Component {
@@ -184,7 +185,7 @@ class App extends Component {
         <h3 style={styles.h3dark}> IDENTIFICATION DE LA STRUCTURE </h3>
       </div>
       <div style={{display: 'flex', justifyContent: 'space-between', height: 250}} >
-        <div style={{backgroundColor: 'red', flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
+        <div style={{flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
           <div>
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
@@ -204,7 +205,7 @@ class App extends Component {
              </MuiThemeProvider>
           </div>
         </div>
-        <div style={{backgroundColor: 'blue', flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
+        <div style={{ flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
           <div>
               <MuiThemeProvider muiTheme={MyTheme}>
                 <TextField
@@ -456,8 +457,96 @@ class App extends Component {
 {/* ACTES EFFECTUES */}
             <h3 style={styles.h3dark}> ACTES EFFECTUES  </h3>
             <h6 style={{color: '#72644f',margin: 0, fontSize: 14}}>
-              <i>(si les actes sont soumis à la formalité de l'accord préalable, indiquez la date de la demande)</i>
+              <i>{"(si les actes sont soumis à la formalité de l'accord préalable, indiquez la date de la demande)"}</i>
             </h6>
+    {/* ACTES EFFECTUES */}
+      <div style={{display: 'flex',  justifyContent: 'space-between', height: 550}}>
+        <div style={{flex: 8}}>
+          <div style={{color: '#72644f', fontSize: '12px'}}>
+            <p> date des actes </p>
+          </div>
+          <div>
+            <Box
+              firstElem={<DatePicker
+                          hintText="Date"
+                          DateTimeFormat={DateFormat}
+                          mode="landscape"
+                          locale="fr"
+                          textFieldStyle={{width: '100%'}}
+                          underlineShow={false}/>}
+              secondElem={<TextLogo name="localisation automatique"/>} />
+          </div>
+        </div>
+        <div style={{flex: 8}}>
+        <div style={{color: '#72644f', fontSize: '12px'}}>
+          <p> code des actes </p>
+        </div>
+          <div>
+            <Box
+              firstElem={<AutoComplete />}
+              secondElem={<AutoComplete />}/>
+          </div>
+        </div>
+        <div style={{flex: 1}}>
+          <div style={{color: '#72644f',
+                      fontSize: '12px',
+                      WebkitTransform: 'rotate(-90deg)',
+                      MozTransform: 'rotate(-90deg)',
+                      OTransform: 'rotate(-90deg)',
+                      MsTransform: 'rotate(-90deg)',
+                      transform: 'rotate(-90deg)'}}>
+            <p> activités </p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div style={{flex: 2}}>
+          <div style={{color: '#72644f', fontSize: '12px'}}>
+            <p> C. CS </p>
+            <p> V. VS </p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div style={{flex: 7}}>
+          <div style={{color: '#72644f', fontSize: '12px'}}>
+            <p> autres actes (TO, ...)
+             éléments de la tarification CCAM
+             (modificateurs, association,...)</p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div style={{flex: 7}}>
+          <div style={{color: '#72644f', fontSize: '12px'}}>
+              <p> montant des honoraires facturés </p>
+            </div>
+          <div>
+          </div>
+        </div>
+        <div style={{flex: 2}}>
+          <div style={{color: '#72644f',
+                      fontSize: '12px',
+                      WebkitTransform: 'rotate(-90deg)',
+                      MozTransform: 'rotate(-90deg)',
+                      OTransform: 'rotate(-90deg)',
+                      MsTransform: 'rotate(-90deg)',
+                      transform: 'rotate(-90deg)'}}>
+            <p> dépass. </p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div style={{flex: 8}}>
+          <div style={{color: '#72644f', fontSize: '12px'}}>
+            <p> frais de déplacement </p>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+
+
 {/* PAIEMENT */}
               <div style={{display: 'flex', marginTop: 4}}>
                   <h3 style={styles.h3dark}> PAIEMENT </h3>
