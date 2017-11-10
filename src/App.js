@@ -650,7 +650,7 @@ class App extends Component {
                           <Checkbox
                               label="impossibilite de signer"
                               labelPosition="left"
-                              labelStyle={{color: '#72644f'}}
+                              labelStyle={{color: '#72644f', bottom: 10}}
                               style={styles.checkbox}/>
                       </MuiThemeProvider>
                   </div>
