@@ -374,6 +374,86 @@ class App extends Component {
             <div style={{display: 'flex'}}>
               <h6 style={styles.h6}><i>(les trois rubriques ci-dessu sont complétées, le cas échéant, uniquement par le medecin)</i></h6>
             </div>
+
+            <div style={{backgroundColor: '#d7d1ca', display: 'flex'}}>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='si vous êtes le nouveau médecin traitant cochez cette case'
+                    labelPosition='left'
+                    labelStyle={{fontWeight: 'thin', color: '#72644f', alignSelf: 'left', fontSize: 14, width: '55%'}}
+                    style={styles.checkbox}/>
+              </MuiThemeProvider>
+            </div>
+            <div style={{marginTop: 4, height: 22, backgroundColor: '#d7d1ca'}}>
+            <p style={{color:'#72644f', fontSize: 14, paddingTop: 4, paddingLeft: 8, backgroundColor: '#d7d1ca', marginBottom: 0, display: 'flex'}}>si le patient est envoyé par le médecin traitant, compléter la ligne ci-dessus <i style={{paddingLeft: 8}}>(s'il ne l'est pas, cochez une case de la ligne suivante)</i></p>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <TextField
+                 fullWidth={true}
+                 floatingLabelStyle= {{paddingLeft: 10, top: 27, fontSize: 18, color:'#72644f'}}
+                 style={{height: 25, backgroundColor: '#d7d1ca'}}
+                 underlineShow={false}
+                 inputStyle={{ left: 180, bottom: 13, fontSize: 20}}
+                 floatingLabelText="nom et prénom du médecin  "
+                 floatingLabelFixed={true}/>
+             </MuiThemeProvider>
+            </div>
+
+            <div style={{display:'flex', backgroundColor: '#d7d1ca', marginTop: 28}}>
+              <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='accès direct spécifique'
+                    labelPosition="left"
+                    labelStyle={{marginLeft: 2, width: 122, fontSize: 10, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                    iconStyle={{display: 'flex'}}
+                    style={styles.checkbox}/>
+              </MuiThemeProvider>
+              </div>
+              <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='urgence'
+                    labelPosition="left"
+                    iconStyle={{display: 'flex'}}
+                    labelStyle={{marginLeft: 2, paddingLeft: 6, fontSize: 10, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.checkbox}/>
+              </MuiThemeProvider>
+              </div>
+              <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='hors résidence habituelle'
+                    labelPosition="left"
+                    iconStyle={{display: 'flex'}}
+                    style={{width: 40}}
+                    labelStyle={{marginLeft: 2, width: 122, fontSize: 10, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.space}/>
+              </MuiThemeProvider>
+              </div>
+              <div style={{marginLeft: -20}}>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='medecin traitant remplacé'
+                    labelPosition="left"
+                    iconStyle={{display: 'flex'}}
+                    style={{width: 40}}
+                    labelStyle={{marginLeft: 2, width: 130, fontSize: 10, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.space}/>
+              </MuiThemeProvider>
+              </div>
+              <div style={{marginLeft: -20}}>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='accés hors coordination'
+                    labelPosition="left"
+                    iconStyle={{display: 'flex'}}
+                    style={{width: 40}}
+                    labelStyle={{width: 130, margineLeft: -150,fontSize: 10, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.space}/>
+              </MuiThemeProvider>
+              </div>
+            </div>
+
         </div>
       </div>
 
