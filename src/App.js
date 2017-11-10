@@ -239,7 +239,7 @@ class App extends Component {
 
               <div style={{display:'flex', backgroundColor: '#d7d1ca', marginTop: 5, marginLeft: 40}}>
                 <div>
-                  <h5 style={styles.h5}>acte en rapport avec</h5>
+                  <h5 style={styles.h5Rapport}>acte en rapport avec</h5>
                 </div>
                 <div>
                 <MuiThemeProvider muiTheme={MyTheme}>
@@ -294,6 +294,7 @@ class App extends Component {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -368,6 +369,15 @@ const styles = {
     color: '#72644f',
     fontSize: 13,
     fontWeight: 300,
+  },
+  h5Rapport: {
+    fontWeight: 'bold',
+    color: '#72644f',
+    alignSelf: 'left',
+    width: 177,
+    margin: 4,
+    marginTop: 7,
+    fontSize: 11,
   },
   h5: {
     fontWeight: 'bold',
