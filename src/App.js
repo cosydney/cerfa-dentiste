@@ -294,6 +294,46 @@ class App extends Component {
               </div>
             </div>
           </div>
+          <div style={{display:'flex', backgroundColor: '#d7d1ca', marginTop: 5, marginLeft: 40}}>
+            <div>
+              <h5 style={styles.h5Rapport}>accident causé par un tiers</h5>
+            </div>
+            <div>
+            <MuiThemeProvider muiTheme={MyTheme}>
+              <Checkbox
+                  label='oui'
+                  labelPosition="left"
+                  labelStyle={{marginLeft: 10, width: 66, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                  iconStyle={{display: 'flex'}}
+                  style={styles.checkbox}/>
+            </MuiThemeProvider>
+            </div>
+            <div>
+            <MuiThemeProvider muiTheme={MyTheme}>
+              <Checkbox
+                  label='non'
+                  labelPosition="left"
+                  iconStyle={{display: 'flex'}}
+                  labelStyle={{marginLeft: 10, width: 160, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                  style={styles.checkbox}/>
+            </MuiThemeProvider>
+            </div>
+              <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                 <DatePicker
+                 floatingLabelFixed={true}
+                 floatingLabelText="date"
+                 underlineShow={false}
+                 floatingLabelStyle= {{paddingLeft: 30, top: 25, fontSize: 18, left: -110, color: '#72644f' }}
+                 DateTimeFormat={DateFormat}
+                 mode="landscape"
+                 locale="fr"
+                 placeholder={'JJ/MM/AAAA'}
+                 style={{backgroundColor: '#d7d1ca', height: 25, width: '73px', marginLeft: 117}}
+                 inputStyle={{ right: 50, bottom: 14, fontSize: 20, height: 25, borderLeft: 'thin solid white', width: '352'}} />
+              </MuiThemeProvider>
+              </div>
+            </div>
 
         </div>
       </div>
