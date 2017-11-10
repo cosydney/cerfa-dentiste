@@ -75,7 +75,7 @@ class App extends Component {
                 </MuiThemeProvider>
             </div>
           </div>
-{/* 1ere partie */}
+{/* PREMIERE PARTIE */}
           <h3 style={styles.h3dark}> PERSONNE RECEVANT LES SOINS ET ASSURE(E) </h3>
           <div style={{display: 'flex', marginTop: 4}}>
 {/* Personne recevant les soins */}
@@ -165,7 +165,7 @@ class App extends Component {
              floatingLabelFixed={true}/>
          </MuiThemeProvider>
         </div>
-{/*Addresse de l'ASSURE */}
+{/* Addresse de l'ASSURE */}
         <div style={{display: 'flex'}}>
           <h3 style={styles.h3}>{"ADRESS DE L'ASSURE(E)"}</h3>
         </div>
@@ -219,6 +219,81 @@ class App extends Component {
         </div>
       </div>
 
+{/*CONDITION DE PRISE EN CHARGE DES ACTES*/}
+      <h3 style={styles.h3dark}> CONDITION DE PRISE EN CHARGE DES ACTES </h3>
+      <div style={{display: 'flex'}}>
+        <div style={{width: '70.5%', display:'flex', flexDirection: 'column', marginTop: 3}}>
+            <div style={{display:'flex',backgroundColor: '#d7d1ca'}}>
+            <div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='MALADIE'
+                    labelStyle={{fontWeight: 'bold', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.checkbox}/>
+              </MuiThemeProvider>
+            </div>
+                <div>
+                  <i style={styles.italicTitle}>(si exonération du ticket modérateur, cochez une case de la ligne suivante)</i>
+                </div>
+              </div>
+
+              <div style={{display:'flex', backgroundColor: '#d7d1ca', marginTop: 5, marginLeft: 40}}>
+                <div>
+                  <h5 style={styles.h5}>acte en rapport avec</h5>
+                </div>
+                <div>
+                <MuiThemeProvider muiTheme={MyTheme}>
+                  <Checkbox
+                      label='une ALD'
+                      labelPosition="left"
+                      labelStyle={{marginLeft: 10, width: 66, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                      iconStyle={{display: 'flex'}}
+                      style={styles.checkbox}/>
+                </MuiThemeProvider>
+                </div>
+                <div>
+                <MuiThemeProvider muiTheme={MyTheme}>
+                  <Checkbox
+                      label='action de prevention'
+                      labelPosition="left"
+                      iconStyle={{display: 'flex'}}
+                      labelStyle={{marginLeft: 10, width: 160, fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                      style={styles.checkbox}/>
+                </MuiThemeProvider>
+                </div>
+                <div>
+                <MuiThemeProvider muiTheme={MyTheme}>
+                  <Checkbox
+                      label='autre'
+                      labelPosition="left"
+                      iconStyle={{display: 'flex'}}
+                      style={{width: 40}}
+                      labelStyle={{marginLeft: 10, width: 40,fontWeight: '500', color: '#72644f', alignSelf: 'left'}}
+                      style={styles.space}/>
+                </MuiThemeProvider>
+                </div>
+              </div>
+          </div>
+
+          <div style={{width: '30.5%',  backgroundColor: '#d7d1ca', marginLeft: 5, marginTop: 2, display: 'flex', flexDirection: 'column'}}>
+            <div style={{display: 'flex', width: '20%', flexDirection: 'row'}}>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <Checkbox
+                    label='ACTES'
+                    labelPosition="right"
+                    iconStyle={{display: 'flex'}}
+                    labelStyle={{marginLeft: -15, width: 40, fontSize: 14, fontWeight: 'bold', color: '#72644f', alignSelf: 'left'}}
+                    style={styles.space}/>
+              </MuiThemeProvider>
+              <div style={{width: '80%', marginLeft: -150}}>
+                <h5 style={styles.h5}>{"dispensés au titre de l'art L. 212-1"}</h5>
+              </div>
+            </div>
+              <div style={{marginRight: 10, marginLeft: 10, marginTop: -5}}>
+                <i style={{ color: '#72644f', fontSize: 10, padding: 0}}>(cf. la notice au verso : § précédé de * et les recommendations importantes)</i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -253,7 +328,7 @@ const styles = {
     color: "#aca193"
   },
   checkbox:{
-    color: 'yellow'
+    color: 'yellow',
   },
   firstContainer:{
     display: 'flex',
@@ -264,7 +339,8 @@ const styles = {
   h3dark: {
     backgroundColor: '#72644f',
     color: 'white',
-    padding: 5,
+    paddingTop: 5,
+    paddingBottom: 5,
     margin: 0,
     width: '100%'
   },
@@ -283,7 +359,7 @@ const styles = {
   italic: {
     paddingLeft: 5,
     color: '#72644f',
-    fontSize: 12
+    fontSize: 10
   },
   h4dark: {
     margin: 0,
@@ -292,5 +368,20 @@ const styles = {
     color: '#72644f',
     fontSize: 13,
     fontWeight: 300,
+  },
+  h5: {
+    fontWeight: 'bold',
+    color: '#72644f',
+    alignSelf: 'left',
+    width: 177,
+    margin: 4,
+    marginTop: 7,
+    fontSize: 11,
+  },
+  space:{
+    width: 221,
   }
 };
+
+// light brown '#d7d1ca'
+// dark brown '#72644f'
