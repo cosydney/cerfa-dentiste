@@ -335,6 +335,45 @@ class App extends Component {
               </div>
             </div>
 
+            <div style={{display:'flex',backgroundColor: '#d7d1ca', marginTop: 5}}>
+              <div>
+                <MuiThemeProvider muiTheme={MyTheme}>
+                  <Checkbox
+                      label='AT/MP'
+                      labelStyle={{fontWeight: 'bold', color: '#72644f', alignSelf: 'left'}}
+                      style={styles.checkbox}/>
+                </MuiThemeProvider>
+              </div>
+              <MuiThemeProvider muiTheme={MyTheme}>
+                <TextField
+                 floatingLabelStyle= {{paddingLeft: 10, top: 25, fontSize: 18, color: "#72644f"}}
+                 style={{backgroundColor: '#d7d1ca', height: 25, marginLeft: 110}}
+                 placeholder={'Entrer votre numéro ici'}
+                 underlineShow={false}
+                 inputStyle={{ left: 80, bottom: 14, fontSize: 20, borderLeft: 'thin solid white'}}
+                 floatingLabelText="numéro"
+                 floatingLabelFixed={true}/>
+             </MuiThemeProvider>
+             <div>
+             <MuiThemeProvider muiTheme={MyTheme}>
+                <DatePicker
+                floatingLabelFixed={true}
+                floatingLabelText="ou date"
+                underlineShow={false}
+                floatingLabelStyle= {{paddingLeft: 30, top: 25, fontSize: 18, left: -110, color: '#72644f' }}
+                DateTimeFormat={DateFormat}
+                mode="landscape"
+                locale="fr"
+                placeholder={'JJ/MM/AAAA'}
+                style={{backgroundColor: '#d7d1ca', height: 25, width: '73px', marginLeft: 213}}
+                inputStyle={{ right: 50, bottom: 14, fontSize: 20, height: 25, borderLeft: 'thin solid white', width: '352'}} />
+             </MuiThemeProvider>
+             </div>
+            </div>
+            <h3 style={{backgroundColor: '#72644f', paddingBottom: 3, marginTop: 3, width: '100%', marginBottom: 0}}> </h3>
+            <div style={{display: 'flex'}}>
+              <h6 style={styles.h6}><i>(les trois rubriques ci-dessu sont complétées, le cas échéant, uniquement par le medecin)</i></h6>
+            </div>
         </div>
       </div>
 
@@ -427,6 +466,12 @@ const styles = {
     margin: 4,
     marginTop: 7,
     fontSize: 11,
+  },
+  h6: {
+    color: '#72644f',
+    alignContent: 'left',
+    margin: 0,
+    paddingLeft: 10,
   },
   space:{
     width: 221,
