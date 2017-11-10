@@ -179,7 +179,10 @@ class App extends Component {
            floatingLabelFixed={true}/>
         </MuiThemeProvider>
 {/* IDENTIFICATION */}
-
+      <div style={{display: 'flex'}}>
+        <h3 style={styles.h3dark}> IDENTIFICATION DU PRATICIEN </h3>
+        <h3 style={styles.h3dark}> IDENTIFICATION DE LA STRUCTURE </h3>
+      </div>
       <div style={{display: 'flex', justifyContent: 'space-between', height: 250}} >
         <div style={{backgroundColor: 'red', flex: 1, display: 'flex', justifyContent:'flex-end', flexDirection:'column'}}>
           <div>
@@ -263,6 +266,7 @@ const styles = {
     color: 'white',
     padding: 5,
     margin: 0,
+    width: '100%'
   },
   h3: {
     color: '#72644f',
