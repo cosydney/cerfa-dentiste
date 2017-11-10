@@ -179,7 +179,7 @@ class App extends Component {
            floatingLabelFixed={true}/>
         </MuiThemeProvider>
 {/* IDENTIFICATION */}
-      <div style={{display: 'flex'}}>
+      <div style={{display: 'flex', marginTop: 2}}>
         <h3 style={styles.h3dark}> IDENTIFICATION DU PRATICIEN </h3>
         <h3 style={styles.h3dark}> IDENTIFICATION DE LA STRUCTURE </h3>
       </div>
@@ -453,7 +453,75 @@ class App extends Component {
               </MuiThemeProvider>
               </div>
             </div>
-
+            {/* PAIEMENT */}
+              <div style={{display: 'flex', marginTop: 4}}>
+                  <h3 style={styles.h3dark}> PAIEMENT </h3>
+              </div>
+              <div style={{display: 'flex', justifyContent: 'space-between', height: 56}} >
+                  <div style={{marginTop: 4, marginLeft:322, height: 22}}>
+                  <MuiThemeProvider muiTheme={MyTheme}>
+                      <TextField
+                      fullWidth={true}
+                      floatingLabelStyle= {{paddingLeft: 20, top: 27, fontSize: 18, width: 200}}
+                      style={{backgroundColor: '#afa599', height: 46, fontWeight: 'bold'}}
+                      underlineShow={false}
+                      inputStyle={{ left: 230, bottom: 14, backgroundColor: '#d7d1ca', fontSize: 20, paddingRight: 10, textAlign: 'right'}}
+                      floatingLabelText="MONTANT TOTAL en euros (1+2+3)"
+                      floatingLabelFixed={true}/>
+                  </MuiThemeProvider>
+                  </div>
+              </div>
+              <div style={{display: 'flex', backgroundColor: '#d7d1ca', textAlign:'left'}}>
+                  <div style={{width: '50%'}}>
+                      <MuiThemeProvider muiTheme={MyTheme}>
+                          <Checkbox
+                              label="l'assuré(e) n'a pas payé la part obligatoire"
+                              labelPosition="left"
+                              labelStyle={{color: '#72644f', fontSize: 14, marginLeft: 10}}/>
+                      </MuiThemeProvider>
+                  </div>
+                  <div style={{width: '50%', borderLeft: 'solid white'}}>
+                      <MuiThemeProvider muiTheme={MyTheme}>
+                          <Checkbox
+                              label="l'assuré(e) n'a pas payé la part complementaire"
+                              labelPosition="left"
+                              labelStyle={{color: '#72644f', fontSize: 14, marginLeft: 10}}/>
+                      </MuiThemeProvider>
+                  </div>
+              </div>
+              <div style={{display: 'flex', height: 55, backgroundColor: '#afa599', marginTop: 4, textAlign: 'left', fontSize: 15}} >
+                  <div style={{width: '40%'}}>
+                      <MuiThemeProvider muiTheme={MyTheme}>
+                          <TextField
+                              floatingLabelStyle= {{paddingLeft: 10, top: 22, width: 200}}
+                              style={{height: 46, fontWeight: 'bold'}}
+                              underlineShow={false}
+                              inputStyle={{ left: 145, bottom: 10, backgroundColor: '#ffffff', width: 200, paddingLeft: 10}}
+                              floatingLabelText="signature du practicien ayant effectue l'acte ou les actes"
+                              floatingLabelFixed={true}/>
+                      </MuiThemeProvider>
+                  </div>
+                  <div style={{width: '40%'}}>
+                      <MuiThemeProvider muiTheme={MyTheme}>
+                          <TextField
+                              floatingLabelStyle= {{paddingLeft: 10, top: 22, width: 200}}
+                              style={{height: 46, fontWeight: 'bold'}}
+                              underlineShow={false}
+                              inputStyle={{ left: 145, bottom: 10, backgroundColor: '#ffffff', width: 200, paddingLeft: 10}}
+                              floatingLabelText="signature du practicien ayant effectue l'acte ou les actes"
+                              floatingLabelFixed={true}/>
+                      </MuiThemeProvider>
+                  </div>
+                  <div style={{width: '20%', paddingTop: 12}}>
+                      <MuiThemeProvider muiTheme={MyTheme}>
+                          <Checkbox
+                              label="impossibilite de signer"
+                              labelPosition="left"
+                              labelStyle={{color: '#72644f'}}
+                              style={styles.checkbox}/>
+                      </MuiThemeProvider>
+                  </div>
+              </div>
         </div>
       </div>
 
