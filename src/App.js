@@ -664,6 +664,7 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5,
     margin: 0,
+    marginTop: 4,
     width: '100%'
   },
   h3: {
