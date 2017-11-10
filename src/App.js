@@ -459,13 +459,12 @@ class App extends Component {
             <h6 style={{color: '#72644f',margin: 0, fontSize: 14}}>
               <i>{"(si les actes sont soumis à la formalité de l'accord préalable, indiquez la date de la demande)"}</i>
             </h6>
-    {/* ACTES EFFECTUES */}
       <div style={{display: 'flex',  justifyContent: 'space-between', height: 550}}>
         <div style={{flex: 8}}>
-          <div style={{color: '#72644f', fontSize: '12px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
             <p> date des actes </p>
           </div>
-          <div>
+          <div style={{display: 'flex',  justifyContent: 'space-between', flexDirection: 'column', height: '375px'}}>
             <Box
               firstElem={<DatePicker
                           hintText="Date"
@@ -475,13 +474,49 @@ class App extends Component {
                           textFieldStyle={{width: '100%'}}
                           underlineShow={false}/>}
               secondElem={<TextLogo name="localisation automatique"/>} />
+              <Box
+                firstElem={<DatePicker
+                            hintText="Date"
+                            DateTimeFormat={DateFormat}
+                            mode="landscape"
+                            locale="fr"
+                            textFieldStyle={{width: '100%'}}
+                            underlineShow={false}/>}
+                secondElem={<TextLogo name="localisation automatique"/>} />
+                <Box
+                  firstElem={<DatePicker
+                              hintText="Date"
+                              DateTimeFormat={DateFormat}
+                              mode="landscape"
+                              locale="fr"
+                              textFieldStyle={{width: '100%'}}
+                              underlineShow={false}/>}
+                  secondElem={<TextLogo name="localisation automatique"/>} />
+                  <Box
+                    firstElem={<DatePicker
+                                hintText="Date"
+                                DateTimeFormat={DateFormat}
+                                mode="landscape"
+                                locale="fr"
+                                textFieldStyle={{width: '100%'}}
+                                underlineShow={false}/>}
+                    secondElem={<TextLogo name="localisation automatique"/>} />
           </div>
         </div>
         <div style={{flex: 8}}>
-        <div style={{color: '#72644f', fontSize: '12px'}}>
+        <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
           <p> code des actes </p>
         </div>
           <div>
+            <Box
+              firstElem={<AutoComplete />}
+              secondElem={<AutoComplete />}/>
+            <Box
+              firstElem={<AutoComplete />}
+              secondElem={<AutoComplete />}/>
+            <Box
+              firstElem={<AutoComplete />}
+              secondElem={<AutoComplete />}/>
             <Box
               firstElem={<AutoComplete />}
               secondElem={<AutoComplete />}/>
@@ -494,14 +529,16 @@ class App extends Component {
                       MozTransform: 'rotate(-90deg)',
                       OTransform: 'rotate(-90deg)',
                       MsTransform: 'rotate(-90deg)',
-                      transform: 'rotate(-90deg)'}}>
+                      transform: 'rotate(-90deg)',
+                      backgroundColor: '#d7d1ca',
+                      height: '50px'}}>
             <p> activités </p>
           </div>
           <div>
           </div>
         </div>
         <div style={{flex: 2}}>
-          <div style={{color: '#72644f', fontSize: '12px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
             <p> C. CS </p>
             <p> V. VS </p>
           </div>
@@ -509,7 +546,7 @@ class App extends Component {
           </div>
         </div>
         <div style={{flex: 7}}>
-          <div style={{color: '#72644f', fontSize: '12px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
             <p> autres actes (TO, ...)
              éléments de la tarification CCAM
              (modificateurs, association,...)</p>
@@ -518,7 +555,7 @@ class App extends Component {
           </div>
         </div>
         <div style={{flex: 7}}>
-          <div style={{color: '#72644f', fontSize: '12px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
               <p> montant des honoraires facturés </p>
             </div>
           <div>
@@ -531,14 +568,16 @@ class App extends Component {
                       MozTransform: 'rotate(-90deg)',
                       OTransform: 'rotate(-90deg)',
                       MsTransform: 'rotate(-90deg)',
-                      transform: 'rotate(-90deg)'}}>
+                      transform: 'rotate(-90deg)',
+                      backgroundColor: '#d7d1ca',
+                      height: '50px'}}>
             <p> dépass. </p>
           </div>
           <div>
           </div>
         </div>
         <div style={{flex: 8}}>
-          <div style={{color: '#72644f', fontSize: '12px'}}>
+          <div style={{color: '#72644f', fontSize: '12px', backgroundColor: '#d7d1ca', height: '50px'}}>
             <p> frais de déplacement </p>
           </div>
           <div>
